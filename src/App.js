@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Header from "./Componenets/Header";
+import Journey from "./Componenets/Journey";
 import SelectLine from "./Componenets/SelectLine";
 import SelectTransport from "./Componenets/SelectTransport";
 
@@ -20,10 +21,10 @@ function App() {
     <div className="App">
       <Header />
       <SelectTransport handleSelectedMode={handleSelectedMode} />
+      <p>{mode}</p>
       <SelectLine mode={mode} handleSelectedLine={handleSelectedLine} />
-      <p>
-        {mode} {line}
-      </p>
+      <p>{line}</p>
+      <Journey line={line} />
     </div>
   );
 }

@@ -5,7 +5,6 @@ const SelectLine = ({ mode, handleSelectedLine }) => {
 
   useEffect(() => {
     if (!mode) return;
-
     fetch(`https://api.tfl.gov.uk/Line/Mode/${mode}`)
       .then((res) => res.json())
       .then((data) => setLines(data));
