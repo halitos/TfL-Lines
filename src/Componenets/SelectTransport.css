@@ -1,0 +1,11 @@
+.mode-selector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.mod-select {
+  width: 80vh;
+  margin-top: 20px;
+}
