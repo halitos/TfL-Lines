@@ -1,0 +1,14 @@
+.info-side {
+  display: flex;
+  justify-content: center;
+}
+
+.info-start,
+.info-end {
+  border: solid 3px rgb(25, 3, 105);
+  border-radius: 10px;
+  width: 30%;
+  margin: 20px;
+  padding: 0 10px 10px;
+  background-color: rgb(88, 207, 209);
+}

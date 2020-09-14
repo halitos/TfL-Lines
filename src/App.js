@@ -21,9 +21,9 @@ function App() {
     <div className="App">
       <Header />
       <SelectTransport handleSelectedMode={handleSelectedMode} />
-      <p>{mode}</p>
+      {/* <p>Selected Mode: {mode}</p> */}
       <SelectLine mode={mode} handleSelectedLine={handleSelectedLine} />
-      <p>{line}</p>
+      {/* <p>Selected Line: {line}</p> */}
       <Journey line={line} />
     </div>
   );
