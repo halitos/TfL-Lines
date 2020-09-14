@@ -2,10 +2,25 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  padding: 20px;
 }
 
-.mod-select {
+/* .mod-select {
   width: 80vh;
+  margin-top: 20px;
+} */
+
+.selector {
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #444;
+  line-height: 1.4;
+  padding: 0.8em;
+  border: 1px solid #aaa;
+  border-radius: 0.5em;
+  width: 70%;
+  margin: 5px;
+  background-color: rgb(200, 233, 233);
   margin-top: 20px;
 }

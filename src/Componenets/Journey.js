@@ -7,10 +7,12 @@ const Journey = ({ line }) => {
     if (!line) return;
     fetch(`https://api.tfl.gov.uk/Line/${line}/Route`)
       .then((res) => res.json())
-      .then((data) => setLineInfo(data));
+      .then((lineInfo) => setLineInfo(lineInfo));
   }, [line]);
 
-  if (lineInfo) {
+  if (!lineInfo) {
+    return null;
+  } else {
     return (
       <div>
         <h2>
@@ -29,7 +31,6 @@ const Journey = ({ line }) => {
       </div>
     );
   }
-  return "";
 };
 
 export default Journey;

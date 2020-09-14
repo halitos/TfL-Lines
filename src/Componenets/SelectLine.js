@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./SelectLine.css";
 
 const SelectLine = ({ mode, handleSelectedLine }) => {
   const [lines, setLines] = useState();
@@ -16,7 +17,7 @@ const SelectLine = ({ mode, handleSelectedLine }) => {
   if (lines === undefined) return "";
   return (
     <div>
-      <select onChange={handleChange}>
+      <select className="selector" onChange={handleChange}>
         <option>Select a Line...</option>
         {lines.map((ln, index) => {
           return (

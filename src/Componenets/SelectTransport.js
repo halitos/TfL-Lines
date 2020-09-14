@@ -19,8 +19,8 @@ const SelectTransport = ({ handleSelectedMode }) => {
   if (transport !== undefined) {
     return (
       <div className="mode-selector">
-        <label>Please Select a Transport Mode</label>
-        <select className="mod-select" onChange={handleChange}>
+        <h4>Select a Transport Mode and a Line</h4>
+        <select className="selector" onChange={handleChange}>
           <option>Chose a Mode...</option>
           {transport.map(function (mode, index) {
             return (

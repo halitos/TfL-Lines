@@ -1,9 +1,11 @@
 import React from "react";
+import "./Header.css";
 
 const Header = () => {
   return (
-    <div>
-      <h1>TfL Line Information</h1>
+    <div className="header">
+      <h1>Transport for London</h1>
+      <h4>Line Information</h4>
     </div>
   );
 };
