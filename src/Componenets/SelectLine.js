@@ -19,8 +19,12 @@ const SelectLine = ({ mode, handleSelectedLine }) => {
       <div>
         <select onChange={handleChange}>
           <option>Select a Line...</option>
-          {lines.map((ln) => {
-            return <option>{ln.name}</option>;
+          {lines.map((ln, index) => {
+            return (
+              <option key={index} value={ln.name}>
+                {ln.name}
+              </option>
+            );
           })}
         </select>
       </div>
