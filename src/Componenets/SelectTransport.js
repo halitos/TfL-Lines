@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./SelectTransport.css";
 
-const SelectTransport = () => {
+const SelectTransport = ({ handleSelectedMode }) => {
   const [transport, setTransport] = useState();
 
   useEffect(() => {
@@ -10,19 +10,29 @@ const SelectTransport = () => {
       .then((data) => setTransport(data));
   }, []);
 
-  if (transport) {
+  function handleChange(event) {
+    if (event.target.value) {
+      handleSelectedMode(event.target.value);
+    }
+  }
+
+  if (transport !== undefined) {
     return (
       <div className="mode-selector">
         <label>Please Select a Transport Mode</label>
-        <select className="mod-select">
+        <select className="mod-select" onChange={handleChange}>
           <option>Chose a Mode...</option>
           {transport.map((mode, index) => {
-            return <option key={index}>{mode.modeName}</option>;
+            return (
+              <option key={index} value={mode.modeName}>
+                {mode.modeName}
+              </option>
+            );
           })}
         </select>
       </div>
     );
-  } else return "loading";
+  } else return "";
 };
 
 export default SelectTransport;
