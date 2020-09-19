@@ -13,7 +13,6 @@ const Journey = ({ line }) => {
       .then((lineInfo) => setLineInfo(lineInfo));
   }, [line]);
 
-  console.log(lineInfo);
   if (!lineInfo) {
     return null;
   } else if (!lineInfo.routeSections) {
