@@ -14,21 +14,24 @@ const SelectLine = ({ mode, handleSelectedLine }) => {
   function handleChange(event) {
     handleSelectedLine(event.target.value);
   }
-  if (lines === undefined) return "";
-  return (
-    <div>
-      <select className="selector" onChange={handleChange}>
-        <option>Select a Line...</option>
-        {lines.map((ln, index) => {
-          return (
-            <option key={index} value={ln.name}>
-              {ln.name}
-            </option>
-          );
-        })}
-      </select>
-    </div>
-  );
+  if (lines === undefined) {
+    return null;
+  } else {
+    return (
+      <div>
+        <select className="selector" onChange={handleChange}>
+          <option>Select a Line...</option>
+          {lines.map((ln, index) => {
+            return (
+              <option key={index} value={ln.name}>
+                {ln.name}
+              </option>
+            );
+          })}
+        </select>
+      </div>
+    );
+  }
 };
 
 export default SelectLine;
